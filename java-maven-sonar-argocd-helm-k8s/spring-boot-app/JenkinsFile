@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test Code Analysis') {
             steps {
-                withSonarQubeEnv('My SonarQube Server') {
+                withSonarQubeEnv('sonarqube') {
                     sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn sonar:sonar'
                 }
             }
